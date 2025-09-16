@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Calculator {
+    background: #000;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.Calculator::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: linear-gradient(90deg, #ccc, #fff, #ccc);
+    border-radius: 5px;
+}
+
+.Calculator form input {
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #666, #999);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3), -5px -5px 10px rgba(255,255,255,0.1);
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 8px;
+    transition: all 0.2s ease;
+}
+
+.Calculator form input:hover {
+    background: linear-gradient(145deg, #777, #aaa);
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.4), -3px -3px 8px rgba(255,255,255,0.2);
+}
+
+.Calculator form input:active {
+    background: linear-gradient(145deg, #555, #888);
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5), inset -5px -5px 10px rgba(255,255,255,0.1);
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    background: #000;
+    color: #00ff00;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: inset 0 0 10px rgba(0,255,0,0.3);
+    font-family: 'Courier New', monospace;
+}
+
+form input.equal {
+    width: 145px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #ff4500, #ff6347);
+    color: #fff;
+}
+
+form input.equal:hover {
+    background: linear-gradient(145deg, #ff6347, #ff7f50);
+}
+
+form input.equal:active {
+    background: linear-gradient(145deg, #dc143c, #ff4500);
+}
+
+form input.operator {
+    background: linear-gradient(145deg, #daa520, #ffd700);
+    color: #000;
+}
+
+form input.operator:hover {
+    background: linear-gradient(145deg, #ffd700, #ffff00);
+}
+
+form input.operator:active {
+    background: linear-gradient(145deg, #b8860b, #daa520);
+}
